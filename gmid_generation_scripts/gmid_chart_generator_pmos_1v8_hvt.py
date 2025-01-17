@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
-path="/root/.xschem/simulations/"
+# change this to your ngspice run directory where all raw files and txt files are dumped post simulations.
+path="/headless/.xschem/simulations/"
 # creating vectors for storing vov, gm/id, gm/gds, id/W
 vov=[[],[],[],[],[]]
 gm_id=[[],[],[],[],[]]
