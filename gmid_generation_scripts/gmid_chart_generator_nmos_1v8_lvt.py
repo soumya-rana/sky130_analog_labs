@@ -1,5 +1,5 @@
 import matplotlib.pyplot as plt
-path="/root/.xschem/simulations/"
+path="/headless/.xschem/simulations/"
 # creating vectors for storing vov, gm/id, gm/gds, id/W
 vov=[[],[],[],[],[]]
 gm_id=[[],[],[],[],[]]
