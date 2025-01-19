@@ -1,5 +1,4 @@
-v {xschem version=3.4.5 file_version=1.2
-}
+v {xschem version=3.4.6 file_version=1.2}
 G {}
 K {}
 V {}
@@ -110,11 +109,11 @@ plot @m.xm2.msky130_fd_pr__nfet_01v8_lvt[gm]
 plot @m.xm3.msky130_fd_pr__nfet_01v8_lvt[gm]
 plot @m.xm4.msky130_fd_pr__nfet_01v8_lvt[gm]
 plot @m.xm5.msky130_fd_pr__nfet_01v8_lvt[gm]
-wrdata gmid_nmos_1_nfet_01v8_lvt_tb.txt @m.xm1.msky130_fd_pr__nfet_01v8_lvt[gm] i(VD1) @m.xm1.msky130_fd_pr__nfet_01v8_lvt[vth] @m.xm1.msky130_fd_pr__nfet_01v8_lvt[gds]
-wrdata gmid_nmos_2_nfet_01v8_lvt_tb.txt @m.xm2.msky130_fd_pr__nfet_01v8_lvt[gm] i(VD2) @m.xm2.msky130_fd_pr__nfet_01v8_lvt[vth] @m.xm2.msky130_fd_pr__nfet_01v8_lvt[gds]
-wrdata gmid_nmos_3_nfet_01v8_lvt_tb.txt @m.xm3.msky130_fd_pr__nfet_01v8_lvt[gm] i(VD3) @m.xm3.msky130_fd_pr__nfet_01v8_lvt[vth] @m.xm3.msky130_fd_pr__nfet_01v8_lvt[gds]
-wrdata gmid_nmos_4_nfet_01v8_lvt_tb.txt @m.xm4.msky130_fd_pr__nfet_01v8_lvt[gm] i(VD4) @m.xm4.msky130_fd_pr__nfet_01v8_lvt[vth] @m.xm4.msky130_fd_pr__nfet_01v8_lvt[gds]
-wrdata gmid_nmos_5_nfet_01v8_lvt_tb.txt @m.xm5.msky130_fd_pr__nfet_01v8_lvt[gm] i(VD5) @m.xm5.msky130_fd_pr__nfet_01v8_lvt[vth] @m.xm5.msky130_fd_pr__nfet_01v8_lvt[gds]
+wrdata gmid_1_nfet_01v8_lvt_tb.txt @m.xm1.msky130_fd_pr__nfet_01v8_lvt[gm] i(VD1) @m.xm1.msky130_fd_pr__nfet_01v8_lvt[vth] @m.xm1.msky130_fd_pr__nfet_01v8_lvt[gds]
+wrdata gmid_2_nfet_01v8_lvt_tb.txt @m.xm2.msky130_fd_pr__nfet_01v8_lvt[gm] i(VD2) @m.xm2.msky130_fd_pr__nfet_01v8_lvt[vth] @m.xm2.msky130_fd_pr__nfet_01v8_lvt[gds]
+wrdata gmid_3_nfet_01v8_lvt_tb.txt @m.xm3.msky130_fd_pr__nfet_01v8_lvt[gm] i(VD3) @m.xm3.msky130_fd_pr__nfet_01v8_lvt[vth] @m.xm3.msky130_fd_pr__nfet_01v8_lvt[gds]
+wrdata gmid_4_nfet_01v8_lvt_tb.txt @m.xm4.msky130_fd_pr__nfet_01v8_lvt[gm] i(VD4) @m.xm4.msky130_fd_pr__nfet_01v8_lvt[vth] @m.xm4.msky130_fd_pr__nfet_01v8_lvt[gds]
+wrdata gmid_5_nfet_01v8_lvt_tb.txt @m.xm5.msky130_fd_pr__nfet_01v8_lvt[gm] i(VD5) @m.xm5.msky130_fd_pr__nfet_01v8_lvt[vth] @m.xm5.msky130_fd_pr__nfet_01v8_lvt[gds]
 set appendwrite
 op
 remzerovec

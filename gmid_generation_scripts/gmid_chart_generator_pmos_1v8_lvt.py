@@ -2,14 +2,14 @@ import matplotlib.pyplot as plt
 # change this to your ngspice run directory where all raw files and txt files are dumped post simulations.
 path="/headless/.xschem/simulations/"
 # creating vectors for storing vov, gm/id, gm/gds, id/W
-vov=[[],[],[],[],[]]
-gm_id=[[],[],[],[],[]]
-gm_gds=[[],[],[],[],[]]
-id_W=[[],[],[],[],[]]
-W=2e-6
+vov=[[],[],[],[],[],[]]
+gm_id=[[],[],[],[],[],[]]
+gm_gds=[[],[],[],[],[],[]]
+id_W=[[],[],[],[],[],[]]
+W=10e-6
 # read data from the text file 
-for i in range(5):
-    filename=path+"gmid_nmos_"+str(i+1)+"_pfet_01v8_lvt_tb.txt"
+for i in range(6):
+    filename=path+"gmid_"+str(i+1)+"_pfet_01v8_lvt_tb.txt"
     fID = open(filename,'r')
     for line in fID:
         temp=list(map(float,line.strip().split()))
@@ -20,20 +20,20 @@ for i in range(5):
             id_W[i].append(temp[3]/W)
 fig, ax = plt.subplots(1,3)
 # plot gm/id versus Vov
-ax[0].plot(vov[0], gm_id[0], vov[1], gm_id[1], vov[2], gm_id[2], vov[3], gm_id[3], vov[4], gm_id[4])
-ax[0].legend(["L=0.35u","L=0.5u","L=1u","L=2u","L=4u"])
+ax[0].plot(vov[0], gm_id[0], vov[1], gm_id[1], vov[2], gm_id[2], vov[3], gm_id[3], vov[4], gm_id[4], vov[5], gm_id[5])
+ax[0].legend(["L=0.35u","L=0.5u","L=1u","L=2u","L=4u","L=8u"])
 ax[0].grid()
 ax[0].set(xlabel='Vov', ylabel = 'gm/id')
 ax[0].set_title("gm/id versus V_{ov}")
 # plot gm/gds versus gm/id
-ax[1].plot(gm_id[0], gm_gds[0], gm_id[1], gm_gds[1], gm_id[2], gm_gds[2], gm_id[3], gm_gds[3], gm_id[4], gm_gds[4])
-ax[1].legend(["L=0.35u","L=0.5u","L=1u","L=2u","L=4u"])
+ax[1].plot(gm_id[0], gm_gds[0], gm_id[1], gm_gds[1], gm_id[2], gm_gds[2], gm_id[3], gm_gds[3], gm_id[4], gm_gds[4], gm_id[5], gm_gds[5])
+ax[1].legend(["L=0.35u","L=0.5u","L=1u","L=2u","L=4u","L=8u"])
 ax[1].grid()
 ax[1].set(xlabel='gm/id', ylabel = 'gm/gds')
 ax[1].set_title("gm/gds vs gm/id")
 # plot id/W versus gm/id
-ax[2].plot(gm_id[0], id_W[0], gm_id[1], id_W[1], gm_id[2], id_W[2], gm_id[3], id_W[3], gm_id[4], id_W[4])
-ax[2].legend(["L=0.35u","L=0.5u","L=1u","L=2u","L=4u"])
+ax[2].plot(gm_id[0], id_W[0], gm_id[1], id_W[1], gm_id[2], id_W[2], gm_id[3], id_W[3], gm_id[4], id_W[4], gm_id[5], id_W[5])
+ax[2].legend(["L=0.35u","L=0.5u","L=1u","L=2u","L=4u","L=8u"])
 ax[2].grid()
 ax[2].set(xlabel='gm/id', ylabel = 'id/W')
 ax[2].set_title("id/W vs gm/id")

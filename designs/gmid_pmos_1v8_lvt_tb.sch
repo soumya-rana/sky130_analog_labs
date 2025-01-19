@@ -1,5 +1,4 @@
-v {xschem version=3.4.5 file_version=1.2
-}
+v {xschem version=3.4.6 file_version=1.2}
 G {}
 K {}
 V {}
@@ -67,6 +66,16 @@ N 1100 -1440 1100 -1380 {
 lab=VDD}
 N 1100 -1320 1100 -1260 {
 lab=GND}
+N 1640 -1060 1640 -1010 {
+lab=GND}
+N 1640 -1060 1640 -1010 {
+lab=GND}
+N 1640 -1190 1640 -1180 {
+lab=VD}
+N 1550 -1090 1600 -1090 {
+lab=VG}
+N 1460 -1190 1640 -1190 {lab=VD}
+N 1460 -1010 1640 -1010 {lab=GND}
 C {devices/lab_pin.sym} 620 -1090 0 0 {name=p1 sig_type=std_logic lab=VG}
 C {devices/lab_pin.sym} 710 -1190 0 0 {name=p3 sig_type=std_logic lab=VD}
 C {devices/vsource.sym} 920 -1350 0 0 {name=VGS value=0.9 savecurrent=false}
@@ -105,6 +114,9 @@ save @m.xm4.msky130_fd_pr__pfet_01v8_lvt[gds]
 save @m.xm5.msky130_fd_pr__pfet_01v8_lvt[gm]
 save @m.xm5.msky130_fd_pr__pfet_01v8_lvt[vth]
 save @m.xm5.msky130_fd_pr__pfet_01v8_lvt[gds]
+save @m.xm6.msky130_fd_pr__pfet_01v8_lvt[gm]
+save @m.xm6.msky130_fd_pr__pfet_01v8_lvt[vth]
+save @m.xm6.msky130_fd_pr__pfet_01v8_lvt[gds]
 dc VGS 0.05 1.8 0.05 
 ** remove zero length vectors to prevent write errors
 remzerovec
@@ -114,11 +126,12 @@ plot @m.xm2.msky130_fd_pr__pfet_01v8_lvt[gm]
 plot @m.xm3.msky130_fd_pr__pfet_01v8_lvt[gm]
 plot @m.xm4.msky130_fd_pr__pfet_01v8_lvt[gm]
 plot @m.xm5.msky130_fd_pr__pfet_01v8_lvt[gm]
-wrdata gmid_nmos_1_pfet_01v8_lvt_tb.txt @m.xm1.msky130_fd_pr__pfet_01v8_lvt[gm] i(VD1) @m.xm1.msky130_fd_pr__pfet_01v8_lvt[vth] @m.xm1.msky130_fd_pr__pfet_01v8_lvt[gds]
-wrdata gmid_nmos_2_pfet_01v8_lvt_tb.txt @m.xm2.msky130_fd_pr__pfet_01v8_lvt[gm] i(VD2) @m.xm2.msky130_fd_pr__pfet_01v8_lvt[vth] @m.xm2.msky130_fd_pr__pfet_01v8_lvt[gds]
-wrdata gmid_nmos_3_pfet_01v8_lvt_tb.txt @m.xm3.msky130_fd_pr__pfet_01v8_lvt[gm] i(VD3) @m.xm3.msky130_fd_pr__pfet_01v8_lvt[vth] @m.xm3.msky130_fd_pr__pfet_01v8_lvt[gds]
-wrdata gmid_nmos_4_pfet_01v8_lvt_tb.txt @m.xm4.msky130_fd_pr__pfet_01v8_lvt[gm] i(VD4) @m.xm4.msky130_fd_pr__pfet_01v8_lvt[vth] @m.xm4.msky130_fd_pr__pfet_01v8_lvt[gds]
-wrdata gmid_nmos_5_pfet_01v8_lvt_tb.txt @m.xm5.msky130_fd_pr__pfet_01v8_lvt[gm] i(VD5) @m.xm5.msky130_fd_pr__pfet_01v8_lvt[vth] @m.xm5.msky130_fd_pr__pfet_01v8_lvt[gds]
+wrdata gmid_1_pfet_01v8_lvt_tb.txt @m.xm1.msky130_fd_pr__pfet_01v8_lvt[gm] i(VD1) @m.xm1.msky130_fd_pr__pfet_01v8_lvt[vth] @m.xm1.msky130_fd_pr__pfet_01v8_lvt[gds]
+wrdata gmid_2_pfet_01v8_lvt_tb.txt @m.xm2.msky130_fd_pr__pfet_01v8_lvt[gm] i(VD2) @m.xm2.msky130_fd_pr__pfet_01v8_lvt[vth] @m.xm2.msky130_fd_pr__pfet_01v8_lvt[gds]
+wrdata gmid_3_pfet_01v8_lvt_tb.txt @m.xm3.msky130_fd_pr__pfet_01v8_lvt[gm] i(VD3) @m.xm3.msky130_fd_pr__pfet_01v8_lvt[vth] @m.xm3.msky130_fd_pr__pfet_01v8_lvt[gds]
+wrdata gmid_4_pfet_01v8_lvt_tb.txt @m.xm4.msky130_fd_pr__pfet_01v8_lvt[gm] i(VD4) @m.xm4.msky130_fd_pr__pfet_01v8_lvt[vth] @m.xm4.msky130_fd_pr__pfet_01v8_lvt[gds]
+wrdata gmid_5_pfet_01v8_lvt_tb.txt @m.xm5.msky130_fd_pr__pfet_01v8_lvt[gm] i(VD5) @m.xm5.msky130_fd_pr__pfet_01v8_lvt[vth] @m.xm5.msky130_fd_pr__pfet_01v8_lvt[gds]
+wrdata gmid_6_pfet_01v8_lvt_tb.txt @m.xm6.msky130_fd_pr__pfet_01v8_lvt[gm] i(VD6) @m.xm6.msky130_fd_pr__pfet_01v8_lvt[vth] @m.xm6.msky130_fd_pr__pfet_01v8_lvt[gds]
 set appendwrite
 op
 remzerovec
@@ -149,7 +162,7 @@ C {devices/gnd.sym} 1100 -1260 0 0 {name=l4 lab=GND}
 C {devices/lab_pin.sym} 920 -1260 0 0 {name=p10 sig_type=std_logic lab=VG}
 C {sky130_fd_pr/pfet3_01v8_lvt.sym} 690 -1090 0 0 {name=M1
 L=0.35
-W=2
+W=10
 body=VDD
 nf=1
 mult=1
@@ -164,7 +177,7 @@ spiceprefix=X
 }
 C {sky130_fd_pr/pfet3_01v8_lvt.sym} 890 -1090 0 0 {name=M2
 L=0.5
-W=2
+W=10
 body=VDD
 nf=1
 mult=1
@@ -179,7 +192,7 @@ spiceprefix=X
 }
 C {sky130_fd_pr/pfet3_01v8_lvt.sym} 1090 -1090 0 0 {name=M3
 L=1
-W=2
+W=10
 body=VDD
 nf=1
 mult=1
@@ -194,7 +207,7 @@ spiceprefix=X
 }
 C {sky130_fd_pr/pfet3_01v8_lvt.sym} 1270 -1090 0 0 {name=M4
 L=2
-W=2
+W=10
 body=VDD
 nf=1
 mult=1
@@ -209,7 +222,24 @@ spiceprefix=X
 }
 C {sky130_fd_pr/pfet3_01v8_lvt.sym} 1440 -1090 0 0 {name=M5
 L=4
-W=2
+W=10
+body=VDD
+nf=1
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=pfet_01v8_lvt
+spiceprefix=X
+}
+C {devices/ammeter.sym} 1640 -1150 0 0 {name=VD6 savecurrent=true}
+C {devices/lab_pin.sym} 1550 -1090 0 0 {name=p11 sig_type=std_logic lab=VG}
+C {sky130_fd_pr/pfet3_01v8_lvt.sym} 1620 -1090 0 0 {name=M6
+L=8
+W=10
 body=VDD
 nf=1
 mult=1

@@ -4,76 +4,84 @@ K {}
 V {}
 S {}
 E {}
-N -50 -30 50 -30 {lab=#net1}
-N -90 -90 -90 -60 {lab=VDD}
-N -90 -90 90 -90 {lab=VDD}
-N 90 -90 90 -60 {lab=VDD}
-N 90 -0 90 150 {lab=#net1}
-N -90 -0 -90 150 {lab=#net2}
-N -90 210 -90 310 {lab=VDD}
-N -90 310 90 310 {lab=VDD}
-N -50 180 50 180 {lab=#net2}
-N -0 130 0 180 {lab=#net2}
-N -90 130 0 130 {lab=#net2}
-N 0 -30 0 30 {lab=#net1}
-N 0 30 90 30 {lab=#net1}
-N 90 210 90 230 {lab=#net3}
-N 90 290 90 310 {lab=VDD}
-N 60 260 70 260 {lab=VDD}
-N 60 260 60 310 {lab=VDD}
-N -110 180 -90 180 {lab=VDD}
-N -110 180 -110 310 {lab=VDD}
-N -110 310 -90 310 {lab=VDD}
-N 90 180 110 180 {lab=VDD}
-N 110 180 110 310 {lab=VDD}
-N 90 310 110 310 {lab=VDD}
-N 50 -30 410 -30 {lab=#net1}
-N 90 -90 450 -90 {lab=VDD}
-N 450 -90 450 -60 {lab=VDD}
-N 450 -0 450 140 {lab=#net4}
-N 110 310 450 310 {lab=VDD}
-N 450 200 450 310 {lab=VDD}
-N 430 170 450 170 {lab=VDD}
-N 430 170 430 310 {lab=VDD}
-N 520 260 520 310 {lab=VDD}
-N 450 310 520 310 {lab=VDD}
-N 520 310 550 310 {lab=VDD}
-N 550 290 550 310 {lab=VDD}
-N 520 260 530 260 {lab=VDD}
-N 550 170 550 230 {lab=#net5}
-N 490 170 550 170 {lab=#net5}
-N 550 -90 550 10 {lab=VDD}
-N 450 -90 550 -90 {lab=VDD}
-N 550 70 550 170 {lab=#net5}
-N 370 40 510 40 {lab=#net6}
-N 330 -90 330 10 {lab=VDD}
-N 370 120 450 120 {lab=#net4}
-N 330 150 330 310 {lab=VDD}
-N 330 70 330 90 {lab=#net6}
-N 330 80 400 80 {lab=#net6}
-N 400 40 400 80 {lab=#net6}
-N 410 -30 640 -30 {lab=#net1}
-N 680 -90 680 -60 {lab=VDD}
-N 550 -90 680 -90 {lab=VDD}
-N 650 260 650 310 {lab=VDD}
-N 650 310 680 310 {lab=VDD}
-N 680 290 680 310 {lab=VDD}
-N 650 260 660 260 {lab=VDD}
-N 680 170 680 230 {lab=#net7}
-N 680 -0 680 170 {lab=#net7}
-N 550 310 650 310 {lab=VDD}
-N 510 40 760 40 {lab=#net6}
-N 800 -90 800 10 {lab=VDD}
-N 680 -90 800 -90 {lab=VDD}
-N 800 70 800 130 {lab=#net7}
-N 680 130 800 130 {lab=#net7}
-N 310 -120 330 -120 {lab=VDD}
-N 330 -120 330 -90 {lab=VDD}
-N 330 310 330 345 {lab=VDD}
-N 305 345 330 345 {lab=VDD}
-C {sky130_fd_pr/pfet3_01v8_lvt.sym} 70 -30 0 0 {name=M1
-W=1
-L=0.35
+T {set ngbehavior=hsa
+set ng_nomodcheck } 450 -125 0 0 0.4 0.4 {font=Monospace}
+N 330 -550 430 -550 {lab=VUPB}
+N 290 -610 290 -580 {lab=VDD}
+N 290 -610 470 -610 {lab=VDD}
+N 470 -610 470 -580 {lab=VDD}
+N 470 -520 470 -370 {lab=VUPB}
+N 290 -520 290 -370 {lab=VLOB}
+N 290 -310 290 -210 {lab=VSS}
+N 290 -210 470 -210 {lab=VSS}
+N 330 -340 430 -340 {lab=VLOB}
+N 380 -390 380 -340 {lab=VLOB}
+N 290 -390 380 -390 {lab=VLOB}
+N 380 -550 380 -490 {lab=VUPB}
+N 380 -490 470 -490 {lab=VUPB}
+N 470 -310 470 -290 {lab=#net1}
+N 470 -230 470 -210 {lab=VSS}
+N 440 -260 450 -260 {lab=VSS}
+N 440 -260 440 -210 {lab=VSS}
+N 270 -340 290 -340 {lab=VSS}
+N 270 -340 270 -210 {lab=VSS}
+N 270 -210 290 -210 {lab=VSS}
+N 470 -340 490 -340 {lab=VSS}
+N 490 -340 490 -210 {lab=VSS}
+N 470 -210 490 -210 {lab=VSS}
+N 430 -550 790 -550 {lab=VUPB}
+N 470 -610 830 -610 {lab=VDD}
+N 830 -610 830 -580 {lab=VDD}
+N 490 -210 830 -210 {lab=VSS}
+N 830 -320 830 -210 {lab=VSS}
+N 900 -260 900 -210 {lab=VSS}
+N 830 -210 900 -210 {lab=VSS}
+N 900 -210 930 -210 {lab=VSS}
+N 930 -230 930 -210 {lab=VSS}
+N 900 -260 910 -260 {lab=VSS}
+N 930 -350 930 -290 {lab=VBE}
+N 870 -340 930 -340 {lab=VBE}
+N 930 -610 930 -510 {lab=VDD}
+N 830 -610 930 -610 {lab=VDD}
+N 930 -450 930 -350 {lab=VBE}
+N 750 -480 890 -480 {lab=#net2}
+N 710 -610 710 -510 {lab=VDD}
+N 750 -400 830 -400 {lab=#net3}
+N 710 -370 710 -210 {lab=VSS}
+N 710 -450 710 -430 {lab=#net2}
+N 710 -440 780 -440 {lab=#net2}
+N 780 -480 780 -440 {lab=#net2}
+N 790 -550 1020 -550 {lab=VUPB}
+N 1060 -610 1060 -580 {lab=VDD}
+N 930 -610 1060 -610 {lab=VDD}
+N 1030 -260 1030 -210 {lab=VSS}
+N 1030 -210 1060 -210 {lab=VSS}
+N 1060 -230 1060 -210 {lab=VSS}
+N 1030 -260 1040 -260 {lab=VSS}
+N 1060 -350 1060 -290 {lab=VREF}
+N 1060 -520 1060 -350 {lab=VREF}
+N 930 -210 1030 -210 {lab=VSS}
+N 890 -480 1140 -480 {lab=#net2}
+N 1180 -610 1180 -510 {lab=VDD}
+N 1060 -610 1180 -610 {lab=VDD}
+N 1180 -450 1180 -390 {lab=VREF}
+N 1060 -390 1180 -390 {lab=VREF}
+N 690 -640 710 -640 {lab=VDD}
+N 710 -640 710 -610 {lab=VDD}
+N 710 -210 710 -175 {lab=VSS}
+N 685 -175 710 -175 {lab=VSS}
+N 350 -70 350 -10 {lab=VDD}
+N 350 50 350 130 {lab=VSS}
+N 830 -520 830 -400 {lab=#net3}
+N 830 -405 830 -370 {lab=#net3}
+N 810 -340 830 -340 {lab=VSS}
+N 810 -340 810 -210 {lab=VSS}
+N 250 50 250 110 {
+lab=GND}
+N 250 -65 250 -10 {lab=VSS}
+C {sky130_fd_pr/pfet3_01v8_lvt.sym} 450 -550 0 0 {name=M1
+W=20
+L=4
 body=VDD
 nf=1
 mult=1
@@ -86,9 +94,9 @@ sa=0 sb=0 sd=0
 model=pfet_01v8_lvt
 spiceprefix=X
 }
-C {sky130_fd_pr/pfet3_01v8_lvt.sym} -70 -30 0 1 {name=M2
-W=1
-L=0.35
+C {sky130_fd_pr/pfet3_01v8_lvt.sym} 310 -550 0 1 {name=M2
+W=20
+L=4
 body=VDD
 nf=1
 mult=1
@@ -101,22 +109,22 @@ sa=0 sb=0 sd=0
 model=pfet_01v8_lvt
 spiceprefix=X
 }
-C {sky130_fd_pr/npn_05v5.sym} 70 180 0 0 {name=Q1
+C {sky130_fd_pr/npn_05v5.sym} 450 -340 0 0 {name=Q1
 model=npn_05v5_w1p00l2p00 m=8
 spiceprefix=X
 }
-C {sky130_fd_pr/npn_05v5.sym} -70 180 0 1 {name=Q2
+C {sky130_fd_pr/npn_05v5.sym} 310 -340 0 1 {name=Q2
 model=npn_05v5_w1p00l2p00 m=1
 spiceprefix=X
 }
-C {sky130_fd_pr/res_high_po_1p41.sym} 90 260 0 0 {name=R1
-L=1.41
+C {sky130_fd_pr/res_high_po_1p41.sym} 470 -260 0 0 {name=R1
+L=230
 model=res_high_po_1p41
 spiceprefix=X
 mult=1}
-C {sky130_fd_pr/pfet3_01v8_lvt.sym} 430 -30 0 0 {name=M3
-W=1
-L=0.35
+C {sky130_fd_pr/pfet3_01v8_lvt.sym} 810 -550 0 0 {name=M3
+W=20
+L=4
 body=VDD
 nf=1
 mult=1
@@ -129,18 +137,18 @@ sa=0 sb=0 sd=0
 model=pfet_01v8_lvt
 spiceprefix=X
 }
-C {sky130_fd_pr/npn_05v5.sym} 470 170 0 1 {name=Q3
+C {sky130_fd_pr/npn_05v5.sym} 850 -340 0 1 {name=Q3
 model=npn_05v5_w1p00l2p00 m=1
 spiceprefix=X
 }
-C {sky130_fd_pr/res_high_po_1p41.sym} 550 260 0 0 {name=R2
-L=1.41
+C {sky130_fd_pr/res_high_po_1p41.sym} 930 -260 0 0 {name=R2
+L=500
 model=res_high_po_1p41
 spiceprefix=X
 mult=1}
-C {sky130_fd_pr/pfet3_01v8_lvt.sym} 530 40 0 0 {name=M4
-W=1
-L=0.35
+C {sky130_fd_pr/pfet3_01v8_lvt.sym} 910 -480 0 0 {name=M4
+W=20
+L=4
 body=VDD
 nf=1
 mult=1
@@ -153,9 +161,9 @@ sa=0 sb=0 sd=0
 model=pfet_01v8_lvt
 spiceprefix=X
 }
-C {sky130_fd_pr/pfet3_01v8_lvt.sym} 350 40 0 1 {name=M5
-W=1
-L=0.35
+C {sky130_fd_pr/pfet3_01v8_lvt.sym} 730 -480 0 1 {name=M5
+W=20
+L=4
 body=VDD
 nf=1
 mult=1
@@ -168,9 +176,9 @@ sa=0 sb=0 sd=0
 model=pfet_01v8_lvt
 spiceprefix=X
 }
-C {sky130_fd_pr/nfet3_01v8.sym} 350 120 0 1 {name=M6
-W=1
-L=0.15
+C {sky130_fd_pr/nfet3_01v8.sym} 730 -400 0 1 {name=M6
+W=4
+L=4
 body=VSS
 nf=1
 mult=1
@@ -183,9 +191,9 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {sky130_fd_pr/pfet3_01v8_lvt.sym} 660 -30 0 0 {name=M7
-W=1
-L=0.35
+C {sky130_fd_pr/pfet3_01v8_lvt.sym} 1040 -550 0 0 {name=M7
+W=20
+L=4
 body=VDD
 nf=1
 mult=1
@@ -198,12 +206,12 @@ sa=0 sb=0 sd=0
 model=pfet_01v8_lvt
 spiceprefix=X
 }
-C {sky130_fd_pr/res_high_po_1p41.sym} 680 260 0 0 {name=R3
-L=1.41
+C {sky130_fd_pr/res_high_po_1p41.sym} 1060 -260 0 0 {name=R3
+L=100
 model=res_high_po_1p41
 spiceprefix=X
 mult=1}
-C {sky130_fd_pr/pfet3_01v8_lvt.sym} 780 40 0 0 {name=M8
+C {sky130_fd_pr/pfet3_01v8_lvt.sym} 1160 -480 0 0 {name=M8
 W=1
 L=0.35
 body=VDD
@@ -218,5 +226,49 @@ sa=0 sb=0 sd=0
 model=pfet_01v8_lvt
 spiceprefix=X
 }
-C {ipin.sym} 310 -120 0 0 {name=p1 lab=VDD}
-C {ipin.sym} 305 345 0 0 {name=p2 lab=VSS}
+C {ipin.sym} 690 -640 0 0 {name=p1 lab=VDD}
+C {ipin.sym} 685 -175 0 0 {name=p2 lab=VSS}
+C {lab_wire.sym} 600 -550 0 0 {name=p3 sig_type=std_logic lab=VUPB}
+C {lab_wire.sym} 360 -390 0 0 {name=p4 sig_type=std_logic lab=VLOB}
+C {lab_wire.sym} 1130 -390 0 0 {name=p5 sig_type=std_logic lab=VREF}
+C {vsource.sym} 350 20 0 0 {name=V1 value=1.65 savecurrent=true}
+C {lab_wire.sym} 350 -70 0 0 {name=p6 sig_type=std_logic lab=VDD}
+C {lab_wire.sym} 350 130 0 0 {name=p7 sig_type=std_logic lab=VSS}
+C {devices/code_shown.sym} 700 -120 0 0 {name=NGSPICE
+only_toplevel=true
+value="
+* ngspice commands
+.option wnflag=1 
+.option savecurrents
+.control
+save all
+dc VGS 0.05 1.8 0.05 
+** remove zero length vectors to prevent write errors
+remzerovec
+write ~/.xschem/simulations/parallel_bandgap.raw
+set appendwrite
+op
+remzerovec
+write ~/.xschem/simulations/parallel_bandgap.raw
+quit 0
+.endc
+"
+
+}
+C {devices/code.sym} 400 50 0 0 {name=MODELS
+only_toplevel=true
+format="tcleval( @value )"
+value="
+** opencircuitdesign pdks install
+.lib $::SKYWATER_MODELS/sky130.lib.spice ss
+
+"
+spice_ignore=false}
+C {devices/launcher.sym} 510 -35 0 0 {name=h5
+descr="load waves" 
+tclcommand="xschem raw_read $netlist_dir/parallel_bandgap.raw dc"
+}
+C {devices/vsource.sym} 250 20 0 0 {name=VS value=0 savecurrent=false}
+C {devices/gnd.sym} 250 110 0 0 {name=l3 lab=GND}
+C {lab_wire.sym} 250 -65 0 0 {name=p8 sig_type=std_logic lab=VSS}
+C {lab_wire.sym} 930 -365 0 0 {name=p9 sig_type=std_logic lab=VBE}

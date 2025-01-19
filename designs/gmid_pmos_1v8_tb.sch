@@ -1,5 +1,4 @@
-v {xschem version=3.4.5 file_version=1.2
-}
+v {xschem version=3.4.6 file_version=1.2}
 G {}
 K {}
 V {}
@@ -105,7 +104,7 @@ save @m.xm4.msky130_fd_pr__pfet_01v8[gds]
 save @m.xm5.msky130_fd_pr__pfet_01v8[gm]
 save @m.xm5.msky130_fd_pr__pfet_01v8[vth]
 save @m.xm5.msky130_fd_pr__pfet_01v8[gds]
-dc VGS 0.05 1.8 0.05 
+dc VG 0.05 1.8 0.05 
 ** remove zero length vectors to prevent write errors
 remzerovec
 write ~/.xschem/simulations/gmid_nmos_tb.raw
@@ -114,11 +113,11 @@ plot @m.xm2.msky130_fd_pr__pfet_01v8[gm]
 plot @m.xm3.msky130_fd_pr__pfet_01v8[gm]
 plot @m.xm4.msky130_fd_pr__pfet_01v8[gm]
 plot @m.xm5.msky130_fd_pr__pfet_01v8[gm]
-wrdata gmid_nmos_1_pfet_01v8_tb.txt @m.xm1.msky130_fd_pr__pfet_01v8[gm] i(VD1) @m.xm1.msky130_fd_pr__pfet_01v8[vth] @m.xm1.msky130_fd_pr__pfet_01v8[gds]
-wrdata gmid_nmos_2_pfet_01v8_tb.txt @m.xm2.msky130_fd_pr__pfet_01v8[gm] i(VD2) @m.xm2.msky130_fd_pr__pfet_01v8[vth] @m.xm2.msky130_fd_pr__pfet_01v8[gds]
-wrdata gmid_nmos_3_pfet_01v8_tb.txt @m.xm3.msky130_fd_pr__pfet_01v8[gm] i(VD3) @m.xm3.msky130_fd_pr__pfet_01v8[vth] @m.xm3.msky130_fd_pr__pfet_01v8[gds]
-wrdata gmid_nmos_4_pfet_01v8_tb.txt @m.xm4.msky130_fd_pr__pfet_01v8[gm] i(VD4) @m.xm4.msky130_fd_pr__pfet_01v8[vth] @m.xm4.msky130_fd_pr__pfet_01v8[gds]
-wrdata gmid_nmos_5_pfet_01v8_tb.txt @m.xm5.msky130_fd_pr__pfet_01v8[gm] i(VD5) @m.xm5.msky130_fd_pr__pfet_01v8[vth] @m.xm5.msky130_fd_pr__pfet_01v8[gds]
+wrdata ~/.xschem/simulations/gmid_1_pfet_01v8_tb.txt @m.xm1.msky130_fd_pr__pfet_01v8[gm] i(VD1) @m.xm1.msky130_fd_pr__pfet_01v8[vth] @m.xm1.msky130_fd_pr__pfet_01v8[gds]
+wrdata ~/.xschem/simulations/gmid_2_pfet_01v8_tb.txt @m.xm2.msky130_fd_pr__pfet_01v8[gm] i(VD2) @m.xm2.msky130_fd_pr__pfet_01v8[vth] @m.xm2.msky130_fd_pr__pfet_01v8[gds]
+wrdata ~/.xschem/simulations/gmid_3_pfet_01v8_tb.txt @m.xm3.msky130_fd_pr__pfet_01v8[gm] i(VD3) @m.xm3.msky130_fd_pr__pfet_01v8[vth] @m.xm3.msky130_fd_pr__pfet_01v8[gds]
+wrdata ~/.xschem/simulations/gmid_4_pfet_01v8_tb.txt @m.xm4.msky130_fd_pr__pfet_01v8[gm] i(VD4) @m.xm4.msky130_fd_pr__pfet_01v8[vth] @m.xm4.msky130_fd_pr__pfet_01v8[gds]
+wrdata ~/.xschem/simulations/gmid_5_pfet_01v8_tb.txt @m.xm5.msky130_fd_pr__pfet_01v8[gm] i(VD5) @m.xm5.msky130_fd_pr__pfet_01v8[vth] @m.xm5.msky130_fd_pr__pfet_01v8[gds]
 set appendwrite
 op
 remzerovec

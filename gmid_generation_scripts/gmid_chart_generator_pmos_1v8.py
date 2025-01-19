@@ -9,7 +9,7 @@ id_W=[[],[],[],[],[]]
 W=2e-6
 # read data from the text file 
 for i in range(5):
-    filename=path+"gmid_nmos_"+str(i+1)+"_pfet_01v8_tb.txt"
+    filename=path+"gmid_"+str(i+1)+"_pfet_01v8_tb.txt"
     fID = open(filename,'r')
     for line in fID:
         temp=list(map(float,line.strip().split()))

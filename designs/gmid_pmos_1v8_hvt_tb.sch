@@ -1,5 +1,4 @@
-v {xschem version=3.4.5 file_version=1.2
-}
+v {xschem version=3.4.6 file_version=1.2}
 G {}
 K {}
 V {}
@@ -114,11 +113,11 @@ plot @m.xm2.msky130_fd_pr__pfet_01v8_hvt[gm]
 plot @m.xm3.msky130_fd_pr__pfet_01v8_hvt[gm]
 plot @m.xm4.msky130_fd_pr__pfet_01v8_hvt[gm]
 plot @m.xm5.msky130_fd_pr__pfet_01v8_hvt[gm]
-wrdata gmid_nmos_1_pfet_01v8_hvt_tb.txt @m.xm1.msky130_fd_pr__pfet_01v8_hvt[gm] i(VD1) @m.xm1.msky130_fd_pr__pfet_01v8_hvt[vth] @m.xm1.msky130_fd_pr__pfet_01v8_hvt[gds]
-wrdata gmid_nmos_2_pfet_01v8_hvt_tb.txt @m.xm2.msky130_fd_pr__pfet_01v8_hvt[gm] i(VD2) @m.xm2.msky130_fd_pr__pfet_01v8_hvt[vth] @m.xm2.msky130_fd_pr__pfet_01v8_hvt[gds]
-wrdata gmid_nmos_3_pfet_01v8_hvt_tb.txt @m.xm3.msky130_fd_pr__pfet_01v8_hvt[gm] i(VD3) @m.xm3.msky130_fd_pr__pfet_01v8_hvt[vth] @m.xm3.msky130_fd_pr__pfet_01v8_hvt[gds]
-wrdata gmid_nmos_4_pfet_01v8_hvt_tb.txt @m.xm4.msky130_fd_pr__pfet_01v8_hvt[gm] i(VD4) @m.xm4.msky130_fd_pr__pfet_01v8_hvt[vth] @m.xm4.msky130_fd_pr__pfet_01v8_hvt[gds]
-wrdata gmid_nmos_5_pfet_01v8_hvt_tb.txt @m.xm5.msky130_fd_pr__pfet_01v8_hvt[gm] i(VD5) @m.xm5.msky130_fd_pr__pfet_01v8_hvt[vth] @m.xm5.msky130_fd_pr__pfet_01v8_hvt[gds]
+wrdata gmid_1_pfet_01v8_hvt_tb.txt @m.xm1.msky130_fd_pr__pfet_01v8_hvt[gm] i(VD1) @m.xm1.msky130_fd_pr__pfet_01v8_hvt[vth] @m.xm1.msky130_fd_pr__pfet_01v8_hvt[gds]
+wrdata gmid_2_pfet_01v8_hvt_tb.txt @m.xm2.msky130_fd_pr__pfet_01v8_hvt[gm] i(VD2) @m.xm2.msky130_fd_pr__pfet_01v8_hvt[vth] @m.xm2.msky130_fd_pr__pfet_01v8_hvt[gds]
+wrdata gmid_3_pfet_01v8_hvt_tb.txt @m.xm3.msky130_fd_pr__pfet_01v8_hvt[gm] i(VD3) @m.xm3.msky130_fd_pr__pfet_01v8_hvt[vth] @m.xm3.msky130_fd_pr__pfet_01v8_hvt[gds]
+wrdata gmid_4_pfet_01v8_hvt_tb.txt @m.xm4.msky130_fd_pr__pfet_01v8_hvt[gm] i(VD4) @m.xm4.msky130_fd_pr__pfet_01v8_hvt[vth] @m.xm4.msky130_fd_pr__pfet_01v8_hvt[gds]
+wrdata gmid_5_pfet_01v8_hvt_tb.txt @m.xm5.msky130_fd_pr__pfet_01v8_hvt[gm] i(VD5) @m.xm5.msky130_fd_pr__pfet_01v8_hvt[vth] @m.xm5.msky130_fd_pr__pfet_01v8_hvt[gds]
 set appendwrite
 op
 remzerovec
