@@ -9,7 +9,7 @@ corners = []
 
 # set the names of sweep var and output vars as per your testbench. output vars should be in the same order as in wrdata command
 sweep_var = ["temp"]
-output_vars = ["i_ptat0", "i_ptat1", "v_vbe", "v_vupb"]
+output_vars = ["i_ptat0", "i_ptat1/i_ptat0", "v_vbe", "v_vupb"]
 
 # loading netlist into inventory
 netlist="temp_char_ptat_ctat"
@@ -20,15 +20,15 @@ for line in fID:
     netlist_lines.append(line.strip().split())
     if line.startswith(".lib"): print(line.strip().split())
 
-# creating list of 16 corners
-pmos = ["f","s"]
-nmos = ["f","s"]
+# creating list of corners. modify the component arrays to include/exclude corner combinations
+pmos = ["f"]
+nmos = ["f"]
 res = ["l","h"]
 cap = ["l","h"]
-for i in range(2):
-    for j in range(2):
-        for k in range(2):
-            for l in range(2):
+for i in range(len(pmos)):
+    for j in range(len(nmos)):
+        for k in range(len(res)):
+            for l in range(len(cap)):
                 corner = pmos[i] + nmos[j] + res[k] + cap[l]
                 corners.append(corner)
 print(" ".join(corners))
@@ -60,6 +60,8 @@ for corner in corners:
             n = len(filename)
             filename = path + netlist + "_" + corner + ".txt"
             line[1] = filename
+        if len(line)>0 and line[0]==".endc":
+            fID.write("quit 0\n")
         temp = " ".join(line)
         fID.write(temp+"\n")
     fID.close()
@@ -84,7 +86,11 @@ for corner in corners:
     for i in range(len(output_vars)):
         ax[i].plot(sweepdata, outdata[output_vars[i]])
         ax[i].grid()
-        ax[i].set(xlabel = sweep_var[0], ylabel = output_vars[i])
-        ax[i].set_title(output_vars[i] + " vs " + sweep_var[0])
-        ax[i].legend(corners)
+
+# adding grid, title and legend to the graph
+for i in range(len(output_vars)):
+    ax[i].grid()
+    ax[i].set(xlabel = sweep_var[0], ylabel = output_vars[i])
+    ax[i].set_title(output_vars[i] + " vs " + sweep_var[0])
+    ax[i].legend(corners)
 plt.show()

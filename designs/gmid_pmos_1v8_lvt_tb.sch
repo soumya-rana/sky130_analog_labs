@@ -87,8 +87,7 @@ only_toplevel=true
 format="tcleval( @value )"
 value="
 ** opencircuitdesign pdks install
-.lib $::SKYWATER_MODELS/sky130.lib.spice ff
-
+.lib /foss/pdks/sky130A/libs.tech/ngspice/sky130.lib.corners.spice sshh
 "
 spice_ignore=false}
 C {devices/code_shown.sym} 120 -1360 0 0 {name=NGSPICE
