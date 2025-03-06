@@ -9,7 +9,7 @@ corners = []
 
 # set the names of sweep var and output vars as per your testbench. output vars should be in the same order as in wrdata command
 sweep_var = ["temp"]
-output_vars = ["VREF", "i_ptat"]
+output_vars = ["VREF", "VUPB"]
 
 # loading netlist into inventory
 netlist="parallel_bandgap_dc_sweep"
@@ -24,7 +24,7 @@ for line in fID:
 pmos = ["f", "s"]
 nmos = ["f", "s"]
 res = ["l", "h"]
-cap = ["l", "h"]
+cap = ["l"]
 for i in range(len(pmos)):
     for j in range(len(nmos)):
         for k in range(len(res)):

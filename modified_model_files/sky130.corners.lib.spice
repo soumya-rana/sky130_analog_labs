@@ -1,0 +1,1248 @@
+* ffll corner 
+
+.lib ffll
+.param MC_MM_SWITCH=0
+.param MC_PR_SWITCH=0
+.param corner_factor=1
+.param process_mc_factor=1
+.param mismatch_factor=1
+
+.include continuous/models_global.spice
+.include continuous/models_fet.spice
+.include continuous/models_bjt.spice
+.include continuous/models_diodes.spice
+.include continuous/models_resistors.spice
+.include continuous/models_capacitors.spice
+
+.include continuous/parameters_fet_ff.spice
+.include continuous/parameters_res_low.spice
+.include continuous/parameters_cap_low.spice
+
+.include corners/ff.spice
+.include corners/ff/specialized_cells.spice
+.include rescap/res_low__cap_low.spice
+.include rescap/res_low__cap_low__lin.spice
+.endl ffll
+
+* ffll corner with mismatch 
+
+.lib ffll_mm
+.param MC_MM_SWITCH=1
+.param MC_PR_SWITCH=0
+.param corner_factor=1
+.param process_mc_factor=1
+.param mismatch_factor=1
+
+.include continuous/models_global.spice
+.include continuous/models_fet.spice
+.include continuous/models_bjt.spice
+.include continuous/models_diodes.spice
+.include continuous/models_resistors.spice
+.include continuous/models_capacitors.spice
+
+.include continuous/parameters_fet_ff.spice
+.include continuous/parameters_res_low.spice
+.include continuous/parameters_cap_low.spice
+
+.include corners/ff.spice
+.include corners/ff/specialized_cells.spice
+.include rescap/res_low__cap_low.spice
+.include rescap/res_low__cap_low__lin.spice
+.endl ffll_mm
+
+* ffll corner with process and mismatch 
+
+.lib ffll_prmm
+.param MC_MM_SWITCH=1
+.param MC_PR_SWITCH=1
+.param corner_factor=1
+.param process_mc_factor=1
+.param mismatch_factor=1
+
+.include continuous/models_global.spice
+.include continuous/models_fet.spice
+.include continuous/models_bjt.spice
+.include continuous/models_diodes.spice
+.include continuous/models_resistors.spice
+.include continuous/models_capacitors.spice
+
+.include continuous/parameters_fet_ff.spice
+.include continuous/parameters_res_low.spice
+.include continuous/parameters_cap_low.spice
+
+.include corners/ff.spice
+.include corners/ff/specialized_cells.spice
+.include rescap/res_low__cap_low.spice
+.include rescap/res_low__cap_low__lin.spice
+.endl ffll_prmm
+
+* fflh corner 
+
+.lib fflh
+.param MC_MM_SWITCH=0
+.param MC_PR_SWITCH=0
+.param corner_factor=1
+.param process_mc_factor=1
+.param mismatch_factor=1
+
+.include continuous/models_global.spice
+.include continuous/models_fet.spice
+.include continuous/models_bjt.spice
+.include continuous/models_diodes.spice
+.include continuous/models_resistors.spice
+.include continuous/models_capacitors.spice
+
+.include continuous/parameters_fet_ff.spice
+.include continuous/parameters_res_low.spice
+.include continuous/parameters_cap_high.spice
+
+.include corners/ff.spice
+.include corners/ff/specialized_cells.spice
+.include rescap/res_low__cap_high.spice
+.include rescap/res_low__cap_high__lin.spice
+.endl fflh
+
+* fflh corner with mismatch 
+
+.lib fflh_mm
+.param MC_MM_SWITCH=1
+.param MC_PR_SWITCH=0
+.param corner_factor=1
+.param process_mc_factor=1
+.param mismatch_factor=1
+
+.include continuous/models_global.spice
+.include continuous/models_fet.spice
+.include continuous/models_bjt.spice
+.include continuous/models_diodes.spice
+.include continuous/models_resistors.spice
+.include continuous/models_capacitors.spice
+
+.include continuous/parameters_fet_ff.spice
+.include continuous/parameters_res_low.spice
+.include continuous/parameters_cap_high.spice
+
+.include corners/ff.spice
+.include corners/ff/specialized_cells.spice
+.include rescap/res_low__cap_high.spice
+.include rescap/res_low__cap_high__lin.spice
+.endl fflh_mm
+
+* fflh corner with process and mismatch 
+
+.lib fflh_prmm
+.param MC_MM_SWITCH=1
+.param MC_PR_SWITCH=1
+.param corner_factor=1
+.param process_mc_factor=1
+.param mismatch_factor=1
+
+.include continuous/models_global.spice
+.include continuous/models_fet.spice
+.include continuous/models_bjt.spice
+.include continuous/models_diodes.spice
+.include continuous/models_resistors.spice
+.include continuous/models_capacitors.spice
+
+.include continuous/parameters_fet_ff.spice
+.include continuous/parameters_res_low.spice
+.include continuous/parameters_cap_high.spice
+
+.include corners/ff.spice
+.include corners/ff/specialized_cells.spice
+.include rescap/res_low__cap_high.spice
+.include rescap/res_low__cap_high__lin.spice
+.endl fflh_prmm
+
+* ffhl corner 
+
+.lib ffhl
+.param MC_MM_SWITCH=0
+.param MC_PR_SWITCH=0
+.param corner_factor=1
+.param process_mc_factor=1
+.param mismatch_factor=1
+
+.include continuous/models_global.spice
+.include continuous/models_fet.spice
+.include continuous/models_bjt.spice
+.include continuous/models_diodes.spice
+.include continuous/models_resistors.spice
+.include continuous/models_capacitors.spice
+
+.include continuous/parameters_fet_ff.spice
+.include continuous/parameters_res_high.spice
+.include continuous/parameters_cap_low.spice
+
+.include corners/ff.spice
+.include corners/ff/specialized_cells.spice
+.include rescap/res_high__cap_low.spice
+.include rescap/res_high__cap_low__lin.spice
+.endl ffhl
+
+* ffhl corner with mismatch 
+
+.lib ffhl_mm
+.param MC_MM_SWITCH=1
+.param MC_PR_SWITCH=0
+.param corner_factor=1
+.param process_mc_factor=1
+.param mismatch_factor=1
+
+.include continuous/models_global.spice
+.include continuous/models_fet.spice
+.include continuous/models_bjt.spice
+.include continuous/models_diodes.spice
+.include continuous/models_resistors.spice
+.include continuous/models_capacitors.spice
+
+.include continuous/parameters_fet_ff.spice
+.include continuous/parameters_res_high.spice
+.include continuous/parameters_cap_low.spice
+
+.include corners/ff.spice
+.include corners/ff/specialized_cells.spice
+.include rescap/res_high__cap_low.spice
+.include rescap/res_high__cap_low__lin.spice
+.endl ffhl_mm
+
+* ffhl corner with process and mismatch 
+
+.lib ffhl_prmm
+.param MC_MM_SWITCH=1
+.param MC_PR_SWITCH=1
+.param corner_factor=1
+.param process_mc_factor=1
+.param mismatch_factor=1
+
+.include continuous/models_global.spice
+.include continuous/models_fet.spice
+.include continuous/models_bjt.spice
+.include continuous/models_diodes.spice
+.include continuous/models_resistors.spice
+.include continuous/models_capacitors.spice
+
+.include continuous/parameters_fet_ff.spice
+.include continuous/parameters_res_high.spice
+.include continuous/parameters_cap_low.spice
+
+.include corners/ff.spice
+.include corners/ff/specialized_cells.spice
+.include rescap/res_high__cap_low.spice
+.include rescap/res_high__cap_low__lin.spice
+.endl ffhl_prmm
+
+* ffhh corner 
+
+.lib ffhh
+.param MC_MM_SWITCH=0
+.param MC_PR_SWITCH=0
+.param corner_factor=1
+.param process_mc_factor=1
+.param mismatch_factor=1
+
+.include continuous/models_global.spice
+.include continuous/models_fet.spice
+.include continuous/models_bjt.spice
+.include continuous/models_diodes.spice
+.include continuous/models_resistors.spice
+.include continuous/models_capacitors.spice
+
+.include continuous/parameters_fet_ff.spice
+.include continuous/parameters_res_high.spice
+.include continuous/parameters_cap_high.spice
+
+.include corners/ff.spice
+.include corners/ff/specialized_cells.spice
+.include rescap/res_high__cap_high.spice
+.include rescap/res_high__cap_high__lin.spice
+.endl ffhh
+
+* ffhh corner with mismatch 
+
+.lib ffhh_mm
+.param MC_MM_SWITCH=1
+.param MC_PR_SWITCH=0
+.param corner_factor=1
+.param process_mc_factor=1
+.param mismatch_factor=1
+
+.include continuous/models_global.spice
+.include continuous/models_fet.spice
+.include continuous/models_bjt.spice
+.include continuous/models_diodes.spice
+.include continuous/models_resistors.spice
+.include continuous/models_capacitors.spice
+
+.include continuous/parameters_fet_ff.spice
+.include continuous/parameters_res_high.spice
+.include continuous/parameters_cap_high.spice
+
+.include corners/ff.spice
+.include corners/ff/specialized_cells.spice
+.include rescap/res_high__cap_high.spice
+.include rescap/res_high__cap_high__lin.spice
+.endl ffhh_mm
+
+* ffhh corner with process and mismatch 
+
+.lib ffhh_prmm
+.param MC_MM_SWITCH=1
+.param MC_PR_SWITCH=1
+.param corner_factor=1
+.param process_mc_factor=1
+.param mismatch_factor=1
+
+.include continuous/models_global.spice
+.include continuous/models_fet.spice
+.include continuous/models_bjt.spice
+.include continuous/models_diodes.spice
+.include continuous/models_resistors.spice
+.include continuous/models_capacitors.spice
+
+.include continuous/parameters_fet_ff.spice
+.include continuous/parameters_res_high.spice
+.include continuous/parameters_cap_high.spice
+
+.include corners/ff.spice
+.include corners/ff/specialized_cells.spice
+.include rescap/res_high__cap_high.spice
+.include rescap/res_high__cap_high__lin.spice
+.endl ffhh_prmm
+
+* fsll corner 
+
+.lib fsll
+.param MC_MM_SWITCH=0
+.param MC_PR_SWITCH=0
+.param corner_factor=1
+.param process_mc_factor=1
+.param mismatch_factor=1
+
+.include continuous/models_global.spice
+.include continuous/models_fet.spice
+.include continuous/models_bjt.spice
+.include continuous/models_diodes.spice
+.include continuous/models_resistors.spice
+.include continuous/models_capacitors.spice
+
+.include continuous/parameters_fet_fs.spice
+.include continuous/parameters_res_low.spice
+.include continuous/parameters_cap_low.spice
+
+.include corners/fs.spice
+.include corners/fs/specialized_cells.spice
+.include rescap/res_low__cap_low.spice
+.include rescap/res_low__cap_low__lin.spice
+.endl fsll
+
+* fsll corner with mismatch 
+
+.lib fsll_mm
+.param MC_MM_SWITCH=1
+.param MC_PR_SWITCH=0
+.param corner_factor=1
+.param process_mc_factor=1
+.param mismatch_factor=1
+
+.include continuous/models_global.spice
+.include continuous/models_fet.spice
+.include continuous/models_bjt.spice
+.include continuous/models_diodes.spice
+.include continuous/models_resistors.spice
+.include continuous/models_capacitors.spice
+
+.include continuous/parameters_fet_fs.spice
+.include continuous/parameters_res_low.spice
+.include continuous/parameters_cap_low.spice
+
+.include corners/fs.spice
+.include corners/fs/specialized_cells.spice
+.include rescap/res_low__cap_low.spice
+.include rescap/res_low__cap_low__lin.spice
+.endl fsll_mm
+
+* fsll corner with process and mismatch 
+
+.lib fsll_prmm
+.param MC_MM_SWITCH=1
+.param MC_PR_SWITCH=1
+.param corner_factor=1
+.param process_mc_factor=1
+.param mismatch_factor=1
+
+.include continuous/models_global.spice
+.include continuous/models_fet.spice
+.include continuous/models_bjt.spice
+.include continuous/models_diodes.spice
+.include continuous/models_resistors.spice
+.include continuous/models_capacitors.spice
+
+.include continuous/parameters_fet_fs.spice
+.include continuous/parameters_res_low.spice
+.include continuous/parameters_cap_low.spice
+
+.include corners/fs.spice
+.include corners/fs/specialized_cells.spice
+.include rescap/res_low__cap_low.spice
+.include rescap/res_low__cap_low__lin.spice
+.endl fsll_prmm
+
+* fslh corner 
+
+.lib fslh
+.param MC_MM_SWITCH=0
+.param MC_PR_SWITCH=0
+.param corner_factor=1
+.param process_mc_factor=1
+.param mismatch_factor=1
+
+.include continuous/models_global.spice
+.include continuous/models_fet.spice
+.include continuous/models_bjt.spice
+.include continuous/models_diodes.spice
+.include continuous/models_resistors.spice
+.include continuous/models_capacitors.spice
+
+.include continuous/parameters_fet_fs.spice
+.include continuous/parameters_res_low.spice
+.include continuous/parameters_cap_high.spice
+
+.include corners/fs.spice
+.include corners/fs/specialized_cells.spice
+.include rescap/res_low__cap_high.spice
+.include rescap/res_low__cap_high__lin.spice
+.endl fslh
+
+* fslh corner with mismatch 
+
+.lib fslh_mm
+.param MC_MM_SWITCH=1
+.param MC_PR_SWITCH=0
+.param corner_factor=1
+.param process_mc_factor=1
+.param mismatch_factor=1
+
+.include continuous/models_global.spice
+.include continuous/models_fet.spice
+.include continuous/models_bjt.spice
+.include continuous/models_diodes.spice
+.include continuous/models_resistors.spice
+.include continuous/models_capacitors.spice
+
+.include continuous/parameters_fet_fs.spice
+.include continuous/parameters_res_low.spice
+.include continuous/parameters_cap_high.spice
+
+.include corners/fs.spice
+.include corners/fs/specialized_cells.spice
+.include rescap/res_low__cap_high.spice
+.include rescap/res_low__cap_high__lin.spice
+.endl fslh_mm
+
+* fslh corner with process and mismatch 
+
+.lib fslh_prmm
+.param MC_MM_SWITCH=1
+.param MC_PR_SWITCH=1
+.param corner_factor=1
+.param process_mc_factor=1
+.param mismatch_factor=1
+
+.include continuous/models_global.spice
+.include continuous/models_fet.spice
+.include continuous/models_bjt.spice
+.include continuous/models_diodes.spice
+.include continuous/models_resistors.spice
+.include continuous/models_capacitors.spice
+
+.include continuous/parameters_fet_fs.spice
+.include continuous/parameters_res_low.spice
+.include continuous/parameters_cap_high.spice
+
+.include corners/fs.spice
+.include corners/fs/specialized_cells.spice
+.include rescap/res_low__cap_high.spice
+.include rescap/res_low__cap_high__lin.spice
+.endl fslh_prmm
+
+* fshl corner 
+
+.lib fshl
+.param MC_MM_SWITCH=0
+.param MC_PR_SWITCH=0
+.param corner_factor=1
+.param process_mc_factor=1
+.param mismatch_factor=1
+
+.include continuous/models_global.spice
+.include continuous/models_fet.spice
+.include continuous/models_bjt.spice
+.include continuous/models_diodes.spice
+.include continuous/models_resistors.spice
+.include continuous/models_capacitors.spice
+
+.include continuous/parameters_fet_fs.spice
+.include continuous/parameters_res_high.spice
+.include continuous/parameters_cap_low.spice
+
+.include corners/fs.spice
+.include corners/fs/specialized_cells.spice
+.include rescap/res_high__cap_low.spice
+.include rescap/res_high__cap_low__lin.spice
+.endl fshl
+
+* fshl corner with mismatch 
+
+.lib fshl_mm
+.param MC_MM_SWITCH=1
+.param MC_PR_SWITCH=0
+.param corner_factor=1
+.param process_mc_factor=1
+.param mismatch_factor=1
+
+.include continuous/models_global.spice
+.include continuous/models_fet.spice
+.include continuous/models_bjt.spice
+.include continuous/models_diodes.spice
+.include continuous/models_resistors.spice
+.include continuous/models_capacitors.spice
+
+.include continuous/parameters_fet_fs.spice
+.include continuous/parameters_res_high.spice
+.include continuous/parameters_cap_low.spice
+
+.include corners/fs.spice
+.include corners/fs/specialized_cells.spice
+.include rescap/res_high__cap_low.spice
+.include rescap/res_high__cap_low__lin.spice
+.endl fshl_mm
+
+* fshl corner with process and mismatch 
+
+.lib fshl_prmm
+.param MC_MM_SWITCH=1
+.param MC_PR_SWITCH=1
+.param corner_factor=1
+.param process_mc_factor=1
+.param mismatch_factor=1
+
+.include continuous/models_global.spice
+.include continuous/models_fet.spice
+.include continuous/models_bjt.spice
+.include continuous/models_diodes.spice
+.include continuous/models_resistors.spice
+.include continuous/models_capacitors.spice
+
+.include continuous/parameters_fet_fs.spice
+.include continuous/parameters_res_high.spice
+.include continuous/parameters_cap_low.spice
+
+.include corners/fs.spice
+.include corners/fs/specialized_cells.spice
+.include rescap/res_high__cap_low.spice
+.include rescap/res_high__cap_low__lin.spice
+.endl fshl_prmm
+
+* fshh corner 
+
+.lib fshh
+.param MC_MM_SWITCH=0
+.param MC_PR_SWITCH=0
+.param corner_factor=1
+.param process_mc_factor=1
+.param mismatch_factor=1
+
+.include continuous/models_global.spice
+.include continuous/models_fet.spice
+.include continuous/models_bjt.spice
+.include continuous/models_diodes.spice
+.include continuous/models_resistors.spice
+.include continuous/models_capacitors.spice
+
+.include continuous/parameters_fet_fs.spice
+.include continuous/parameters_res_high.spice
+.include continuous/parameters_cap_high.spice
+
+.include corners/fs.spice
+.include corners/fs/specialized_cells.spice
+.include rescap/res_high__cap_high.spice
+.include rescap/res_high__cap_high__lin.spice
+.endl fshh
+
+* fshh corner with mismatch 
+
+.lib fshh_mm
+.param MC_MM_SWITCH=1
+.param MC_PR_SWITCH=0
+.param corner_factor=1
+.param process_mc_factor=1
+.param mismatch_factor=1
+
+.include continuous/models_global.spice
+.include continuous/models_fet.spice
+.include continuous/models_bjt.spice
+.include continuous/models_diodes.spice
+.include continuous/models_resistors.spice
+.include continuous/models_capacitors.spice
+
+.include continuous/parameters_fet_fs.spice
+.include continuous/parameters_res_high.spice
+.include continuous/parameters_cap_high.spice
+
+.include corners/fs.spice
+.include corners/fs/specialized_cells.spice
+.include rescap/res_high__cap_high.spice
+.include rescap/res_high__cap_high__lin.spice
+.endl fshh_mm
+
+* fshh corner with process and mismatch 
+
+.lib fshh_prmm
+.param MC_MM_SWITCH=1
+.param MC_PR_SWITCH=1
+.param corner_factor=1
+.param process_mc_factor=1
+.param mismatch_factor=1
+
+.include continuous/models_global.spice
+.include continuous/models_fet.spice
+.include continuous/models_bjt.spice
+.include continuous/models_diodes.spice
+.include continuous/models_resistors.spice
+.include continuous/models_capacitors.spice
+
+.include continuous/parameters_fet_fs.spice
+.include continuous/parameters_res_high.spice
+.include continuous/parameters_cap_high.spice
+
+.include corners/fs.spice
+.include corners/fs/specialized_cells.spice
+.include rescap/res_high__cap_high.spice
+.include rescap/res_high__cap_high__lin.spice
+.endl fshh_prmm
+
+* sfll corner 
+
+.lib sfll
+.param MC_MM_SWITCH=0
+.param MC_PR_SWITCH=0
+.param corner_factor=1
+.param process_mc_factor=1
+.param mismatch_factor=1
+
+.include continuous/models_global.spice
+.include continuous/models_fet.spice
+.include continuous/models_bjt.spice
+.include continuous/models_diodes.spice
+.include continuous/models_resistors.spice
+.include continuous/models_capacitors.spice
+
+.include continuous/parameters_fet_sf.spice
+.include continuous/parameters_res_low.spice
+.include continuous/parameters_cap_low.spice
+
+.include corners/sf.spice
+.include corners/sf/specialized_cells.spice
+.include rescap/res_low__cap_low.spice
+.include rescap/res_low__cap_low__lin.spice
+.endl sfll
+
+* sfll corner with mismatch 
+
+.lib sfll_mm
+.param MC_MM_SWITCH=1
+.param MC_PR_SWITCH=0
+.param corner_factor=1
+.param process_mc_factor=1
+.param mismatch_factor=1
+
+.include continuous/models_global.spice
+.include continuous/models_fet.spice
+.include continuous/models_bjt.spice
+.include continuous/models_diodes.spice
+.include continuous/models_resistors.spice
+.include continuous/models_capacitors.spice
+
+.include continuous/parameters_fet_sf.spice
+.include continuous/parameters_res_low.spice
+.include continuous/parameters_cap_low.spice
+
+.include corners/sf.spice
+.include corners/sf/specialized_cells.spice
+.include rescap/res_low__cap_low.spice
+.include rescap/res_low__cap_low__lin.spice
+.endl sfll_mm
+
+* sfll corner with process and mismatch 
+
+.lib sfll_prmm
+.param MC_MM_SWITCH=1
+.param MC_PR_SWITCH=1
+.param corner_factor=1
+.param process_mc_factor=1
+.param mismatch_factor=1
+
+.include continuous/models_global.spice
+.include continuous/models_fet.spice
+.include continuous/models_bjt.spice
+.include continuous/models_diodes.spice
+.include continuous/models_resistors.spice
+.include continuous/models_capacitors.spice
+
+.include continuous/parameters_fet_sf.spice
+.include continuous/parameters_res_low.spice
+.include continuous/parameters_cap_low.spice
+
+.include corners/sf.spice
+.include corners/sf/specialized_cells.spice
+.include rescap/res_low__cap_low.spice
+.include rescap/res_low__cap_low__lin.spice
+.endl sfll_prmm
+
+* sflh corner 
+
+.lib sflh
+.param MC_MM_SWITCH=0
+.param MC_PR_SWITCH=0
+.param corner_factor=1
+.param process_mc_factor=1
+.param mismatch_factor=1
+
+.include continuous/models_global.spice
+.include continuous/models_fet.spice
+.include continuous/models_bjt.spice
+.include continuous/models_diodes.spice
+.include continuous/models_resistors.spice
+.include continuous/models_capacitors.spice
+
+.include continuous/parameters_fet_sf.spice
+.include continuous/parameters_res_low.spice
+.include continuous/parameters_cap_high.spice
+
+.include corners/sf.spice
+.include corners/sf/specialized_cells.spice
+.include rescap/res_low__cap_high.spice
+.include rescap/res_low__cap_high__lin.spice
+.endl sflh
+
+* sflh corner with mismatch 
+
+.lib sflh_mm
+.param MC_MM_SWITCH=1
+.param MC_PR_SWITCH=0
+.param corner_factor=1
+.param process_mc_factor=1
+.param mismatch_factor=1
+
+.include continuous/models_global.spice
+.include continuous/models_fet.spice
+.include continuous/models_bjt.spice
+.include continuous/models_diodes.spice
+.include continuous/models_resistors.spice
+.include continuous/models_capacitors.spice
+
+.include continuous/parameters_fet_sf.spice
+.include continuous/parameters_res_low.spice
+.include continuous/parameters_cap_high.spice
+
+.include corners/sf.spice
+.include corners/sf/specialized_cells.spice
+.include rescap/res_low__cap_high.spice
+.include rescap/res_low__cap_high__lin.spice
+.endl sflh_mm
+
+* sflh corner with process and mismatch 
+
+.lib sflh_prmm
+.param MC_MM_SWITCH=1
+.param MC_PR_SWITCH=1
+.param corner_factor=1
+.param process_mc_factor=1
+.param mismatch_factor=1
+
+.include continuous/models_global.spice
+.include continuous/models_fet.spice
+.include continuous/models_bjt.spice
+.include continuous/models_diodes.spice
+.include continuous/models_resistors.spice
+.include continuous/models_capacitors.spice
+
+.include continuous/parameters_fet_sf.spice
+.include continuous/parameters_res_low.spice
+.include continuous/parameters_cap_high.spice
+
+.include corners/sf.spice
+.include corners/sf/specialized_cells.spice
+.include rescap/res_low__cap_high.spice
+.include rescap/res_low__cap_high__lin.spice
+.endl sflh_prmm
+
+* sfhl corner 
+
+.lib sfhl
+.param MC_MM_SWITCH=0
+.param MC_PR_SWITCH=0
+.param corner_factor=1
+.param process_mc_factor=1
+.param mismatch_factor=1
+
+.include continuous/models_global.spice
+.include continuous/models_fet.spice
+.include continuous/models_bjt.spice
+.include continuous/models_diodes.spice
+.include continuous/models_resistors.spice
+.include continuous/models_capacitors.spice
+
+.include continuous/parameters_fet_sf.spice
+.include continuous/parameters_res_high.spice
+.include continuous/parameters_cap_low.spice
+
+.include corners/sf.spice
+.include corners/sf/specialized_cells.spice
+.include rescap/res_high__cap_low.spice
+.include rescap/res_high__cap_low__lin.spice
+.endl sfhl
+
+* sfhl corner with mismatch 
+
+.lib sfhl_mm
+.param MC_MM_SWITCH=1
+.param MC_PR_SWITCH=0
+.param corner_factor=1
+.param process_mc_factor=1
+.param mismatch_factor=1
+
+.include continuous/models_global.spice
+.include continuous/models_fet.spice
+.include continuous/models_bjt.spice
+.include continuous/models_diodes.spice
+.include continuous/models_resistors.spice
+.include continuous/models_capacitors.spice
+
+.include continuous/parameters_fet_sf.spice
+.include continuous/parameters_res_high.spice
+.include continuous/parameters_cap_low.spice
+
+.include corners/sf.spice
+.include corners/sf/specialized_cells.spice
+.include rescap/res_high__cap_low.spice
+.include rescap/res_high__cap_low__lin.spice
+.endl sfhl_mm
+
+* sfhl corner with process and mismatch 
+
+.lib sfhl_prmm
+.param MC_MM_SWITCH=1
+.param MC_PR_SWITCH=1
+.param corner_factor=1
+.param process_mc_factor=1
+.param mismatch_factor=1
+
+.include continuous/models_global.spice
+.include continuous/models_fet.spice
+.include continuous/models_bjt.spice
+.include continuous/models_diodes.spice
+.include continuous/models_resistors.spice
+.include continuous/models_capacitors.spice
+
+.include continuous/parameters_fet_sf.spice
+.include continuous/parameters_res_high.spice
+.include continuous/parameters_cap_low.spice
+
+.include corners/sf.spice
+.include corners/sf/specialized_cells.spice
+.include rescap/res_high__cap_low.spice
+.include rescap/res_high__cap_low__lin.spice
+.endl sfhl_prmm
+
+* sfhh corner 
+
+.lib sfhh
+.param MC_MM_SWITCH=0
+.param MC_PR_SWITCH=0
+.param corner_factor=1
+.param process_mc_factor=1
+.param mismatch_factor=1
+
+.include continuous/models_global.spice
+.include continuous/models_fet.spice
+.include continuous/models_bjt.spice
+.include continuous/models_diodes.spice
+.include continuous/models_resistors.spice
+.include continuous/models_capacitors.spice
+
+.include continuous/parameters_fet_sf.spice
+.include continuous/parameters_res_high.spice
+.include continuous/parameters_cap_high.spice
+
+.include corners/sf.spice
+.include corners/sf/specialized_cells.spice
+.include rescap/res_high__cap_high.spice
+.include rescap/res_high__cap_high__lin.spice
+.endl sfhh
+
+* sfhh corner with mismatch 
+
+.lib sfhh_mm
+.param MC_MM_SWITCH=1
+.param MC_PR_SWITCH=0
+.param corner_factor=1
+.param process_mc_factor=1
+.param mismatch_factor=1
+
+.include continuous/models_global.spice
+.include continuous/models_fet.spice
+.include continuous/models_bjt.spice
+.include continuous/models_diodes.spice
+.include continuous/models_resistors.spice
+.include continuous/models_capacitors.spice
+
+.include continuous/parameters_fet_sf.spice
+.include continuous/parameters_res_high.spice
+.include continuous/parameters_cap_high.spice
+
+.include corners/sf.spice
+.include corners/sf/specialized_cells.spice
+.include rescap/res_high__cap_high.spice
+.include rescap/res_high__cap_high__lin.spice
+.endl sfhh_mm
+
+* sfhh corner with process and mismatch 
+
+.lib sfhh_prmm
+.param MC_MM_SWITCH=1
+.param MC_PR_SWITCH=1
+.param corner_factor=1
+.param process_mc_factor=1
+.param mismatch_factor=1
+
+.include continuous/models_global.spice
+.include continuous/models_fet.spice
+.include continuous/models_bjt.spice
+.include continuous/models_diodes.spice
+.include continuous/models_resistors.spice
+.include continuous/models_capacitors.spice
+
+.include continuous/parameters_fet_sf.spice
+.include continuous/parameters_res_high.spice
+.include continuous/parameters_cap_high.spice
+
+.include corners/sf.spice
+.include corners/sf/specialized_cells.spice
+.include rescap/res_high__cap_high.spice
+.include rescap/res_high__cap_high__lin.spice
+.endl sfhh_prmm
+
+* ssll corner 
+
+.lib ssll
+.param MC_MM_SWITCH=0
+.param MC_PR_SWITCH=0
+.param corner_factor=1
+.param process_mc_factor=1
+.param mismatch_factor=1
+
+.include continuous/models_global.spice
+.include continuous/models_fet.spice
+.include continuous/models_bjt.spice
+.include continuous/models_diodes.spice
+.include continuous/models_resistors.spice
+.include continuous/models_capacitors.spice
+
+.include continuous/parameters_fet_ss.spice
+.include continuous/parameters_res_low.spice
+.include continuous/parameters_cap_low.spice
+
+.include corners/ss.spice
+.include corners/ss/specialized_cells.spice
+.include rescap/res_low__cap_low.spice
+.include rescap/res_low__cap_low__lin.spice
+.endl ssll
+
+* ssll corner with mismatch 
+
+.lib ssll_mm
+.param MC_MM_SWITCH=1
+.param MC_PR_SWITCH=0
+.param corner_factor=1
+.param process_mc_factor=1
+.param mismatch_factor=1
+
+.include continuous/models_global.spice
+.include continuous/models_fet.spice
+.include continuous/models_bjt.spice
+.include continuous/models_diodes.spice
+.include continuous/models_resistors.spice
+.include continuous/models_capacitors.spice
+
+.include continuous/parameters_fet_ss.spice
+.include continuous/parameters_res_low.spice
+.include continuous/parameters_cap_low.spice
+
+.include corners/ss.spice
+.include corners/ss/specialized_cells.spice
+.include rescap/res_low__cap_low.spice
+.include rescap/res_low__cap_low__lin.spice
+.endl ssll_mm
+
+* ssll corner with process and mismatch 
+
+.lib ssll_prmm
+.param MC_MM_SWITCH=1
+.param MC_PR_SWITCH=1
+.param corner_factor=1
+.param process_mc_factor=1
+.param mismatch_factor=1
+
+.include continuous/models_global.spice
+.include continuous/models_fet.spice
+.include continuous/models_bjt.spice
+.include continuous/models_diodes.spice
+.include continuous/models_resistors.spice
+.include continuous/models_capacitors.spice
+
+.include continuous/parameters_fet_ss.spice
+.include continuous/parameters_res_low.spice
+.include continuous/parameters_cap_low.spice
+
+.include corners/ss.spice
+.include corners/ss/specialized_cells.spice
+.include rescap/res_low__cap_low.spice
+.include rescap/res_low__cap_low__lin.spice
+.endl ssll_prmm
+
+* sslh corner 
+
+.lib sslh
+.param MC_MM_SWITCH=0
+.param MC_PR_SWITCH=0
+.param corner_factor=1
+.param process_mc_factor=1
+.param mismatch_factor=1
+
+.include continuous/models_global.spice
+.include continuous/models_fet.spice
+.include continuous/models_bjt.spice
+.include continuous/models_diodes.spice
+.include continuous/models_resistors.spice
+.include continuous/models_capacitors.spice
+
+.include continuous/parameters_fet_ss.spice
+.include continuous/parameters_res_low.spice
+.include continuous/parameters_cap_high.spice
+
+.include corners/ss.spice
+.include corners/ss/specialized_cells.spice
+.include rescap/res_low__cap_high.spice
+.include rescap/res_low__cap_high__lin.spice
+.endl sslh
+
+* sslh corner with mismatch 
+
+.lib sslh_mm
+.param MC_MM_SWITCH=1
+.param MC_PR_SWITCH=0
+.param corner_factor=1
+.param process_mc_factor=1
+.param mismatch_factor=1
+
+.include continuous/models_global.spice
+.include continuous/models_fet.spice
+.include continuous/models_bjt.spice
+.include continuous/models_diodes.spice
+.include continuous/models_resistors.spice
+.include continuous/models_capacitors.spice
+
+.include continuous/parameters_fet_ss.spice
+.include continuous/parameters_res_low.spice
+.include continuous/parameters_cap_high.spice
+
+.include corners/ss.spice
+.include corners/ss/specialized_cells.spice
+.include rescap/res_low__cap_high.spice
+.include rescap/res_low__cap_high__lin.spice
+.endl sslh_mm
+
+* sslh corner with process and mismatch 
+
+.lib sslh_prmm
+.param MC_MM_SWITCH=1
+.param MC_PR_SWITCH=1
+.param corner_factor=1
+.param process_mc_factor=1
+.param mismatch_factor=1
+
+.include continuous/models_global.spice
+.include continuous/models_fet.spice
+.include continuous/models_bjt.spice
+.include continuous/models_diodes.spice
+.include continuous/models_resistors.spice
+.include continuous/models_capacitors.spice
+
+.include continuous/parameters_fet_ss.spice
+.include continuous/parameters_res_low.spice
+.include continuous/parameters_cap_high.spice
+
+.include corners/ss.spice
+.include corners/ss/specialized_cells.spice
+.include rescap/res_low__cap_high.spice
+.include rescap/res_low__cap_high__lin.spice
+.endl sslh_prmm
+
+* sshl corner 
+
+.lib sshl
+.param MC_MM_SWITCH=0
+.param MC_PR_SWITCH=0
+.param corner_factor=1
+.param process_mc_factor=1
+.param mismatch_factor=1
+
+.include continuous/models_global.spice
+.include continuous/models_fet.spice
+.include continuous/models_bjt.spice
+.include continuous/models_diodes.spice
+.include continuous/models_resistors.spice
+.include continuous/models_capacitors.spice
+
+.include continuous/parameters_fet_ss.spice
+.include continuous/parameters_res_high.spice
+.include continuous/parameters_cap_low.spice
+
+.include corners/ss.spice
+.include corners/ss/specialized_cells.spice
+.include rescap/res_high__cap_low.spice
+.include rescap/res_high__cap_low__lin.spice
+.endl sshl
+
+* sshl corner with mismatch 
+
+.lib sshl_mm
+.param MC_MM_SWITCH=1
+.param MC_PR_SWITCH=0
+.param corner_factor=1
+.param process_mc_factor=1
+.param mismatch_factor=1
+
+.include continuous/models_global.spice
+.include continuous/models_fet.spice
+.include continuous/models_bjt.spice
+.include continuous/models_diodes.spice
+.include continuous/models_resistors.spice
+.include continuous/models_capacitors.spice
+
+.include continuous/parameters_fet_ss.spice
+.include continuous/parameters_res_high.spice
+.include continuous/parameters_cap_low.spice
+
+.include corners/ss.spice
+.include corners/ss/specialized_cells.spice
+.include rescap/res_high__cap_low.spice
+.include rescap/res_high__cap_low__lin.spice
+.endl sshl_mm
+
+* sshl corner with process and mismatch 
+
+.lib sshl_prmm
+.param MC_MM_SWITCH=1
+.param MC_PR_SWITCH=1
+.param corner_factor=1
+.param process_mc_factor=1
+.param mismatch_factor=1
+
+.include continuous/models_global.spice
+.include continuous/models_fet.spice
+.include continuous/models_bjt.spice
+.include continuous/models_diodes.spice
+.include continuous/models_resistors.spice
+.include continuous/models_capacitors.spice
+
+.include continuous/parameters_fet_ss.spice
+.include continuous/parameters_res_high.spice
+.include continuous/parameters_cap_low.spice
+
+.include corners/ss.spice
+.include corners/ss/specialized_cells.spice
+.include rescap/res_high__cap_low.spice
+.include rescap/res_high__cap_low__lin.spice
+.endl sshl_prmm
+
+* sshh corner 
+
+.lib sshh
+.param MC_MM_SWITCH=0
+.param MC_PR_SWITCH=0
+.param corner_factor=1
+.param process_mc_factor=1
+.param mismatch_factor=1
+
+.include continuous/models_global.spice
+.include continuous/models_fet.spice
+.include continuous/models_bjt.spice
+.include continuous/models_diodes.spice
+.include continuous/models_resistors.spice
+.include continuous/models_capacitors.spice
+
+.include continuous/parameters_fet_ss.spice
+.include continuous/parameters_res_high.spice
+.include continuous/parameters_cap_high.spice
+
+.include corners/ss.spice
+.include corners/ss/specialized_cells.spice
+.include rescap/res_high__cap_high.spice
+.include rescap/res_high__cap_high__lin.spice
+.endl sshh
+
+* sshh corner with mismatch 
+
+.lib sshh_mm
+.param MC_MM_SWITCH=1
+.param MC_PR_SWITCH=0
+.param corner_factor=1
+.param process_mc_factor=1
+.param mismatch_factor=1
+
+.include continuous/models_global.spice
+.include continuous/models_fet.spice
+.include continuous/models_bjt.spice
+.include continuous/models_diodes.spice
+.include continuous/models_resistors.spice
+.include continuous/models_capacitors.spice
+
+.include continuous/parameters_fet_ss.spice
+.include continuous/parameters_res_high.spice
+.include continuous/parameters_cap_high.spice
+
+.include corners/ss.spice
+.include corners/ss/specialized_cells.spice
+.include rescap/res_high__cap_high.spice
+.include rescap/res_high__cap_high__lin.spice
+.endl sshh_mm
+
+* sshh corner with process and mismatch 
+
+.lib sshh_prmm
+.param MC_MM_SWITCH=1
+.param MC_PR_SWITCH=1
+.param corner_factor=1
+.param process_mc_factor=1
+.param mismatch_factor=1
+
+.include continuous/models_global.spice
+.include continuous/models_fet.spice
+.include continuous/models_bjt.spice
+.include continuous/models_diodes.spice
+.include continuous/models_resistors.spice
+.include continuous/models_capacitors.spice
+
+.include continuous/parameters_fet_ss.spice
+.include continuous/parameters_res_high.spice
+.include continuous/parameters_cap_high.spice
+
+.include corners/ss.spice
+.include corners/ss/specialized_cells.spice
+.include rescap/res_high__cap_high.spice
+.include rescap/res_high__cap_high__lin.spice
+.endl sshh_prmm
+
