@@ -9,7 +9,7 @@ corners = []
 
 # set the names of sweep var and output vars as per your testbench. output vars should be in the same order as in wrdata command
 sweep_var = ["temp"]
-output_vars = ["VREF", "VUPB"]
+output_vars = ["VREF", "Mirror Accuracy"]
 
 # loading netlist into inventory
 netlist="parallel_bandgap_dc_sweep"
