@@ -30,8 +30,6 @@ N 990 -860 1110 -860 {lab=VDD}
 N 990 -500 1110 -500 {lab=VREF}
 N 620 -890 640 -890 {lab=VDD}
 N 640 -890 640 -860 {lab=VDD}
-N 640 -320 640 -285 {lab=VSS}
-N 615 -285 640 -285 {lab=VSS}
 N 740 -360 760 -360 {lab=VSS}
 N 740 -360 740 -230 {lab=VSS}
 N 760 -860 760 -830 {lab=VDD}
@@ -44,7 +42,6 @@ N 720 -800 950 -800 {lab=VUPB}
 N 720 -680 950 -680 {lab=VPCAS}
 N 680 -730 820 -730 {lab=VCBIAS}
 N 640 -860 640 -760 {lab=VDD}
-N 640 -370 640 -230 {lab=VSS}
 N 640 -610 640 -600 {lab=VCBIAS}
 N 640 -450 640 -430 {lab=VCCAS}
 N 640 -700 640 -670 {lab=#net2}
@@ -57,7 +54,6 @@ N 640 -440 730 -440 {lab=VCCAS}
 N 1110 -860 1110 -760 {lab=VDD}
 N 1110 -700 1110 -670 {lab=#net4}
 N 820 -640 1070 -640 {lab=VCCAS}
-N 1110 -610 1110 -500 {lab=VREF}
 N 990 -770 990 -710 {lab=#net5}
 N 820 -730 1070 -730 {lab=VCBIAS}
 N 760 -770 760 -710 {lab=#net6}
@@ -119,6 +115,12 @@ N 290 -460 290 -440 {lab=#net12}
 N 220 -490 250 -490 {lab=#net14}
 N 290 -860 290 -520 {lab=VDD}
 N 220 -650 220 -550 {lab=VDCAS}
+N 585 -205 600 -205 {lab=VSS}
+N 600 -230 600 -205 {lab=VSS}
+N 640 -370 640 -325 {lab=#net15}
+N 640 -265 640 -230 {lab=VSS}
+N 1110 -610 1110 -585 {lab=#net16}
+N 1110 -525 1110 -500 {lab=VREF}
 C {vsource.sym} 1420 -710 0 0 {name=VDD value=1.65 savecurrent=true}
 C {lab_wire.sym} 1420 -800 0 0 {name=p6 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 1420 -600 0 0 {name=p7 sig_type=std_logic lab=VSS}
@@ -134,7 +136,7 @@ dc temp -40 125 5
 ** remove zero length vectors to prevent write errors
 remzerovec
 write ~/.xschem/simulations/parallel_bandgap_dc_sweep.raw 
-wrdata ~/.xschem/simulations/parallel_bandgap_dc_sweep.txt V(VREF) I(V0)/I(V1)
+wrdata ~/.xschem/simulations/parallel_bandgap_dc_sweep.txt V(VREF) I(V0)/I(V1) I(V2)/I(V3)
 plot V(VREF)
 plot I(V0)/I(V1)
 set temp = 125
@@ -166,7 +168,7 @@ model=npn_05v5_w1p00l2p00 m=1
 spiceprefix=X
 }
 C {sky130_fd_pr/res_high_po_1p41.sym} 860 -280 0 0 {name=R2
-L=2400
+L=2450
 model=res_high_po_1p41
 spiceprefix=X
 mult=1}
@@ -175,7 +177,7 @@ W=50
 L=8
 body=VDD
 nf=1
-mult=1
+mult=2
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
 as="'int((nf+2)/2) * W/nf * 0.29'" 
@@ -190,7 +192,7 @@ W=50
 L=8
 body=VDD
 nf=1
-mult=1
+mult=2
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
 as="'int((nf+2)/2) * W/nf * 0.29'" 
@@ -216,7 +218,7 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {sky130_fd_pr/res_high_po_1p41.sym} 990 -280 0 0 {name=R3
-L=2640
+L=2700
 model=res_high_po_1p41
 spiceprefix=X
 mult=1}
@@ -225,7 +227,7 @@ W=50
 L=8
 body=VDD
 nf=1
-mult=1
+mult=2
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
 as="'int((nf+2)/2) * W/nf * 0.29'" 
@@ -236,11 +238,11 @@ model=pfet_01v8_lvt
 spiceprefix=X
 }
 C {ipin.sym} 620 -890 0 0 {name=p1 lab=VDD}
-C {ipin.sym} 615 -285 0 0 {name=p2 lab=VSS}
+C {ipin.sym} 585 -205 0 0 {name=p2 lab=VSS}
 C {lab_wire.sym} 1060 -500 0 0 {name=p5 sig_type=std_logic lab=VREF}
 C {lab_wire.sym} 860 -415 0 1 {name=p9 sig_type=std_logic lab=VBE}
 C {sky130_fd_pr/pfet3_01v8_lvt.sym} 740 -800 0 0 {name=M9
-W=50
+W=16
 L=8
 body=VDD
 nf=1
@@ -270,7 +272,7 @@ model=pfet_01v8_lvt
 spiceprefix=X
 }
 C {sky130_fd_pr/pfet3_01v8_lvt.sym} 970 -800 0 0 {name=M11
-W=50
+W=16
 L=8
 body=VDD
 nf=1
@@ -300,7 +302,7 @@ model=pfet_01v8_lvt
 spiceprefix=X
 }
 C {sky130_fd_pr/pfet3_01v8_lvt.sym} 660 -730 0 1 {name=M13
-W=50
+W=16
 L=8
 body=VDD
 nf=1
@@ -315,7 +317,7 @@ model=pfet_01v8_lvt
 spiceprefix=X
 }
 C {sky130_fd_pr/pfet3_01v8_lvt.sym} 840 -730 0 0 {name=M14
-W=50
+W=16
 L=8
 body=VDD
 nf=1
@@ -330,12 +332,12 @@ model=pfet_01v8_lvt
 spiceprefix=X
 }
 C {sky130_fd_pr/res_high_po_1p41.sym} 640 -570 0 0 {name=R5
-L=700
+L=900
 model=res_high_po_1p41
 spiceprefix=X
 mult=1}
 C {sky130_fd_pr/pfet3_01v8_lvt.sym} 1090 -730 0 0 {name=M15
-W=50
+W=16
 L=8
 body=VDD
 nf=1
@@ -361,7 +363,7 @@ C {devices/vsource.sym} 220 -520 0 0 {name=V0 value=0 savecurrent=true}
 C {devices/vsource.sym} 400 -520 0 0 {name=V1 value=0 savecurrent=true}
 C {lab_wire.sym} 220 -730 0 0 {name=p3 sig_type=std_logic lab=VSCAS}
 C {sky130_fd_pr/pfet3_01v8_lvt.sym} 380 -800 0 0 {name=M3
-W=50
+W=16
 L=8
 body=VDD
 nf=1
@@ -376,7 +378,7 @@ model=pfet_01v8_lvt
 spiceprefix=X
 }
 C {sky130_fd_pr/pfet3_01v8_lvt.sym} 240 -800 0 1 {name=M1
-W=50
+W=16
 L=8
 body=VDD
 nf=1
@@ -436,7 +438,7 @@ spiceprefix=X
 C {lab_wire.sym} 310 -800 0 0 {name=p10 sig_type=std_logic lab=VUPB}
 C {lab_wire.sym} 310 -680 0 0 {name=p13 sig_type=std_logic lab=VPCAS}
 C {sky130_fd_pr/res_high_po_1p41.sym} 400 -600 0 1 {name=R7
-L=800
+L=900
 model=res_high_po_1p41
 spiceprefix=X
 mult=1}
@@ -488,3 +490,5 @@ spiceprefix=X
 C {lab_wire.sym} 320 -230 0 0 {name=p14 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 220 -630 0 0 {name=p15 sig_type=std_logic lab=VDCAS}
 C {lab_wire.sym} 290 -860 0 0 {name=p16 sig_type=std_logic lab=VDD}
+C {devices/vsource.sym} 640 -295 0 0 {name=V2 value=0 savecurrent=true}
+C {devices/vsource.sym} 1110 -555 0 0 {name=V3 value=0 savecurrent=true}

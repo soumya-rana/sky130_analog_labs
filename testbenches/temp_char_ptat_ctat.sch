@@ -56,7 +56,7 @@ N 430 -230 430 -210 {lab=VBE}
 N 360 -260 390 -260 {lab=#net6}
 N 430 -630 430 -290 {lab=VDD}
 N 360 -420 360 -320 {lab=VDCAS}
-C {vsource.sym} 800 -130 0 0 {name=VD value=3.3 savecurrent=true}
+C {vsource.sym} 800 -130 0 0 {name=VD value=1.65 savecurrent=true}
 C {lab_wire.sym} 800 -220 0 0 {name=p6 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 800 -40 0 0 {name=p7 sig_type=std_logic lab=VSS}
 C {devices/vsource.sym} 700 -130 0 0 {name=VS value=0 savecurrent=false}
@@ -69,13 +69,16 @@ C {devices/code.sym} 670 -580 0 0 {name=TempSweep only_toplevel=false value="
 .option savecurrents
 .control
 save all
-dc temp -40 125 5 VD 1.65 1.8 0.075
+dc temp -40 125 5
 remzerovec
 wrdata ~/.xschem/simulations/temp_char_ptat_ctat.txt i(V0) i(V1)/i(V0) v(VBE) v(VUPB)
 *plot V(VBE), V(VUPB)
 plot V(VSCAS) - V(VDCAS)
 plot I(V1)/I(V0)
 plot I(V0), I(V1)
+set temp = 125
+op
+write ~/.xschem/simulations/temp_char_ptat_ctat.raw
 .endc
 "}
 C {devices/vsource.sym} 360 -290 0 0 {name=V0 value=0 savecurrent=true}
@@ -86,13 +89,13 @@ only_toplevel=true
 format="tcleval( @value )"
 value="
 ** opencircuitdesign pdks install
-.lib /foss/pdks/sky130A/libs.tech/combined/sky130.corners.lib.spice tt
+.lib /foss/pdks/sky130A/libs.tech/combined/sky130.corners.lib.spice fshh
 "
 spice_ignore=false
 }
 C {lab_wire.sym} 360 -500 0 0 {name=p9 sig_type=std_logic lab=VSCAS}
 C {sky130_fd_pr/pfet3_01v8_lvt.sym} 520 -570 0 0 {name=M3
-W=50
+W=16
 L=8
 body=VDD
 nf=1
@@ -107,7 +110,7 @@ model=pfet_01v8_lvt
 spiceprefix=X
 }
 C {sky130_fd_pr/pfet3_01v8_lvt.sym} 380 -570 0 1 {name=M6
-W=50
+W=16
 L=8
 body=VDD
 nf=1
@@ -139,7 +142,7 @@ W=50
 L=8
 body=VDD
 nf=1
-mult=4
+mult=2
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
 as="'int((nf+2)/2) * W/nf * 0.29'" 
@@ -154,7 +157,7 @@ W=50
 L=8
 body=VDD
 nf=1
-mult=4
+mult=2
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
 as="'int((nf+2)/2) * W/nf * 0.29'" 
@@ -167,7 +170,7 @@ spiceprefix=X
 C {lab_wire.sym} 450 -570 0 0 {name=p10 sig_type=std_logic lab=VUPB}
 C {lab_wire.sym} 450 -450 0 0 {name=p11 sig_type=std_logic lab=VPCAS}
 C {sky130_fd_pr/res_high_po_1p41.sym} 540 -370 0 1 {name=R7
-L=800
+L=900
 model=res_high_po_1p41
 spiceprefix=X
 mult=1}

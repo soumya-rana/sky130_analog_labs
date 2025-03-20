@@ -21,16 +21,14 @@ for line in fID:
     if line.startswith(".lib"): print(line.strip().split())
 
 # creating list of corners. modify the component arrays to include/exclude corner combinations
-pmos = ["f"]
-nmos = ["f"]
-res = ["l","h"]
-cap = ["l","h"]
+pmos = ["f", "s"]
+nmos = ["f", "s"]
+rescap = ["ll","hh"]
 for i in range(len(pmos)):
     for j in range(len(nmos)):
-        for k in range(len(res)):
-            for l in range(len(cap)):
-                corner = pmos[i] + nmos[j] + res[k] + cap[l]
-                corners.append(corner)
+        for k in range(len(rescap)):
+            corner = pmos[i] + nmos[j] + rescap[k]
+            corners.append(corner)
 print(" ".join(corners))
 
 # debug statements. i can run ngspice only as root, however i want to check the netlist generation as a normal user as well
@@ -42,6 +40,7 @@ if (result.stdout!="root\n"):
 fig, ax = plt.subplots(1,len(output_vars))
 
 # creating corner netlists
+iteration = 1
 for corner in corners:
     corner_netlist = path + netlist + "_" + corner + ".spice"
     # cleanup netlist if exists
@@ -82,7 +81,9 @@ for corner in corners:
         sweepdata.append(temp[0])
         for i in range(len(output_vars)):
             outdata[output_vars[i]].append(temp[2*i + 1])
-    fID.close
+    fID.close()
+    print("simulation "+ str(iteration) + " out of "+str(len(corners))+" completed!!!")
+    iteration += 1
     for i in range(len(output_vars)):
         ax[i].plot(sweepdata, outdata[output_vars[i]])
         ax[i].grid()
