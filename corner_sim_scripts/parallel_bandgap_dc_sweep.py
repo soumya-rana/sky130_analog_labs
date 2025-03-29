@@ -23,14 +23,12 @@ for line in fID:
 # creating list of corners. modify the component arrays to include/exclude corner combinations
 pmos = ["f", "s"]
 nmos = ["f", "s"]
-res = ["l", "h"]
-cap = ["l"]
+rescap = ["ll","hh"]
 for i in range(len(pmos)):
     for j in range(len(nmos)):
-        for k in range(len(res)):
-            for l in range(len(cap)):
-                corner = pmos[i] + nmos[j] + res[k] + cap[l]
-                corners.append(corner)
+        for k in range(len(rescap)):
+            corner = pmos[i] + nmos[j] + rescap[k]
+            corners.append(corner)
 print(" ".join(corners))
 
 # debug statements. i can run ngspice only as root, however i want to check the netlist generation as a normal user as well
